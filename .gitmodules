@@ -1,0 +1,4 @@
+[submodule "tests/smart-invoice-contracts"]
+	path = tests/smart-invoice-contracts
+	url = git@gitlab.com:create4-lab/smart-invoice-contracts.git
+	branch = main

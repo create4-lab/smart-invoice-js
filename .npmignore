@@ -1,0 +1,11 @@
+tests
+docs
+node_modules
+.gitkeep
+lib/.gitkeep
+.git
+.gitignore
+.eslintrc.js
+.editorconfig
+.eslintignore
+.npmignore
