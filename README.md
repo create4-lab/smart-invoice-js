@@ -3,6 +3,9 @@
 
 # Development
 First install `truffle` and `ganache-cli`
+```bash
+npm i -g truffle ganache-cli
+```
 
 Clone repository
 
