@@ -1,0 +1,33 @@
+{
+  "name": "@create4-lab/smart-invoice-js",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --outfile=lib/index.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/create4-lab/smart-invoice-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/create4-lab/smart-invoice-js/issues"
+  },
+  "homepage": "https://github.com/create4-lab/smart-invoice-js#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "esbuild": "^0.11.11",
+    "eslint": "^7.24.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1"
+  }
+}
