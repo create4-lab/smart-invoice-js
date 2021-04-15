@@ -8,10 +8,10 @@
     "postinstall": "npm run git:pullall && npm run contracts:build",
     "git:pullall": "git submodule update --init --recursive && git pull --recurse-submodules",
     "prepare": "npm run build && npm run docs",
-    "blockchain": "ganache-cli -l 12000000 -a 15",
+    "blockchain": "ganache-cli -p 4242 -l 12000000 -a 15",
     "contracts:build": "truffle build",
     "contracts:deploy": "truffle migrate",
-    "blockchain:stop": "kill -9 $(lsof -t -i:8545) || true",
+    "blockchain:stop": "kill -9 $(lsof -t -i:4242) || true",
     "build": "npm run build:node && npm run build:browser",
     "build:node": "etsc src/index.ts --outfile=lib/index.js",
     "build:browser": "esbuild src/index.ts --outfile=lib/index.browser.js --minify --target=chrome70,firefox57,safari11",
@@ -19,7 +19,7 @@
     "start": "truffle test tests/index.test.js",
     "prestart": "npm run build",
     "pretest": "npm run build",
-    "test": "npm run blockchain:stop & npm run blockchain > /dev/null 2>&1 & wait-on tcp:127.0.0.1:8545 && truffle migrate && truffle test tests/index.test.js && npm run blockchain:stop"
+    "test": "npm run blockchain:stop & npm run blockchain > /dev/null 2>&1 & wait-on tcp:127.0.0.1:4242 && truffle migrate && truffle test tests/index.test.js && npm run blockchain:stop"
   },
   "repository": {
     "type": "git",
