@@ -2,6 +2,8 @@
 
 
 # Development
+First install `truffle` and `ganache-cli`
+
 Clone repository
 
 Install all deps

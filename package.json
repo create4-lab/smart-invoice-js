@@ -4,10 +4,21 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/create4-lab/smart-invoice-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/create4-lab/smart-invoice-js/issues"
+  },
+  "homepage": "https://github.com/create4-lab/smart-invoice-js#readme",
   "scripts": {
     "postinstall": "npm run git:pullall && npm run contracts:build",
-    "git:pullall": "git submodule update --init --recursive && git pull --recurse-submodules",
-    "prepare": "npm run build && npm run docs",
+    "git:pullall": "git submodule update --init --recursive || true && git pull --recurse-submodules || true",
+    "prepack": "npm i -D esbuild esbuild-node-tsc typescript && npm run build",
     "blockchain": "ganache-cli -p 4242 -l 12000000 -a 15",
     "contracts:build": "truffle build",
     "contracts:deploy": "truffle migrate",
@@ -21,17 +32,6 @@
     "pretest": "npm run build",
     "test": "npm run blockchain:stop & npm run blockchain > /dev/null 2>&1 & wait-on tcp:127.0.0.1:4242 && truffle migrate && truffle test tests/index.test.js && npm run blockchain:stop"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/create4-lab/smart-invoice-js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/create4-lab/smart-invoice-js/issues"
-  },
-  "homepage": "https://github.com/create4-lab/smart-invoice-js#readme",
   "devDependencies": {
     "@openzeppelin/contracts": "^4.0.0",
     "@openzeppelin/test-helpers": "^0.5.10",
