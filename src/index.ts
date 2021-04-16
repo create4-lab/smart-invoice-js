@@ -20,7 +20,7 @@ export class SmartInvoice {
   async getBalance (test:any, address:string):Promise<number> {
     console.log(address, test)
 
-    return 100
+    return 10
   }
 
   withdrawInOne () {}
