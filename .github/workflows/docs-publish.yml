@@ -10,6 +10,9 @@ on:
 jobs:
   generate-documentation:
     runs-on: ubuntu-latest
+    env:
+      SURGE_LOGIN: ${{secrets.SURGE_LOGIN}}
+      SURGE_TOKEN: ${{secrets.SURGE_TOKEN}}
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
