@@ -8,7 +8,7 @@ on:
       - 'src/**'
 
 jobs:
-  generate documentation:
+  generate-documentation:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
