@@ -18,7 +18,6 @@ export class SmartInvoice {
    * @returns {Promise(Number)} - user balance
    */
   async getBalance (test:any, address:string):Promise<number> {
-    if (test?.check?.ok) return 1
     return 100
   }
 
