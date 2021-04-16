@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: npm i -D typescript
+      - run: npm i --no-save typescript typedoc
       - run: npm run docs

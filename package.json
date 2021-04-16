@@ -26,7 +26,7 @@
     "build": "npm run build:node && npm run build:browser",
     "build:node": "etsc src/index.ts --outfile=lib/index.js",
     "build:browser": "esbuild src/index.ts --outfile=lib/index.browser.js --minify --target=chrome70,firefox57,safari11",
-    "docs": "npx typedoc src/index.ts && npx surge --domain smart-invoice.surge.sh ./docs",
+    "docs": "typedoc src/index.ts && npx surge --domain smart-invoice.surge.sh ./docs",
     "start": "truffle test tests/index.test.js",
     "prestart": "npm run build",
     "pretest": "npm run build",
