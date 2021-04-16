@@ -1,6 +1,7 @@
 /* eslint-disable no-new */
 const { SmartInvoice } = require('../lib/index.js')
-const { address, abi } = require('./contract-data.json')
+
+const { abi, address } = artifacts.require('SmartInvoiceController')
 
 contract('SmartInvoiceController lib test', () => {
   describe('Validate contructor params', () => {
@@ -39,5 +40,15 @@ contract('SmartInvoiceController lib test', () => {
         }
       }
     })
+
+    it('Class have Contract instance', async () => {
+      const smartInvoice = new SmartInvoice({ web3, abi, address })
+
+      assert.equal(address, smartInvoice.Contract.options.address)
+    })
+  })
+
+  describe('Check basic methods', () => {
+
   })
 })

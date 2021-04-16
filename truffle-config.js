@@ -1,7 +1,7 @@
 
 module.exports = {
   // test_directory: './tests/',
-  migrations_directory: './tests/migrations',
+  migrations_directory: './tests/smart-invoice-contracts/migrations',
   build_directory: './tests/smart-invoice-contracts/build',
   contracts_build_directory: './tests/smart-invoice-contracts/build',
   contracts_directory: './tests/smart-invoice-contracts/contracts',
